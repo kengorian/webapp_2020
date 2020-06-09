@@ -14,4 +14,15 @@ setInterval(function(){
             index++;
         }
     }
+    for(var i=0;i<10;i++){
+        cells[19][i].className="";
+    }
+    for(var row=18;row>=0;row--){
+        for(var col=0;col<10;col++){
+            if(cells[row][col].className!==""){
+                cells[row+1][col].className=cells[row][col].className;
+                cells[row][col].className="";
+            }
+        }
+    }
 },1000);
